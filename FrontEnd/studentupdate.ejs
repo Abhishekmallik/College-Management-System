@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Update Student</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+	<body>
+		
+		<nav class="navbar navbar-expand-sm bg-light navbar-light">
+		  <ul class="navbar-nav">
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/">Home</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/departments">Departments</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/instructors">Instructors</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/students">Students</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/sections">Sections</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/teaches">Teaches</a>
+		    </li>
+		  </ul>
+		</nav>
+		<div class="jumbotron">
+		  <h1 style="text-align: center;">Update Student</h1>
+		  <form action="/students/<%=student.id%>/updating" method ="GET">
+		  	<div class="form-group">
+		  <label for="lname">New ID:</label><br>
+		  <input type="text" id="lname" name="newid" value="<%=student.id%>">
+		</div>
+		  <div class="form-group">
+		  <label for="lname">New Name:</label><br>
+		  <input type="text" id="lname" name="newName" value="<%=student.name%>">
+		</div>
+		  <div class="form-group">
+		  <label for="lname">New Credits:</label><br>
+		  <input type="text" id="lname" name="newCredits" value="<%=student.total_credits%>">
+		</div>
+		  <div class="form-group">
+		  <label for="lname">New Instructor Id:</label><br>
+		  <input type="text" id="lname" name="newInst_id" value="<%=student.instructor_id%>">
+		</div>
+		  <div class="form-group">
+		  <label for="lname">New Department Name:</label><br>
+		  <input type="text" id="lname" name="newDept" value="<%=student.department_name%>">
+		</div>
+		  <input type="submit" value="Submit" class="btn btn-primary">
+		  </form>
+		  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		
+	</body>
+</html>

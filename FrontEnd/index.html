@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>College Management System</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+	<body>
+		
+		<nav class="navbar navbar-expand-sm bg-light navbar-light">
+		  <ul class="navbar-nav">
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/">Home</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/departments">Departments</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/instructors">Instructors</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/students">Students</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/sections">Sections</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/teaches">Teaches</a>
+		    </li>
+		  </ul>
+		</nav>
+		<div class="jumbotron">
+		  <h1>College Management System</h1>
+		  <p><h5>This is a project aiming to implement a utilitarian college management system using concepts of DataBase Management Systems. It uses SQLite as the database management system.</h5></p>
+		  <p><h5>The various schemas designed and used are :</h5></p>
+		  <ul>
+		  	<li>
+		  		<a href="/departments"><h5>Departments :</h5></a>
+		  		It contains attributes - deptName, Building & Budget, necessary to define a particular department.
+		  	</li>
+		  	<li>
+		  		<a href="/instructors"><h5>Instructors :</h5></a>
+		  		It contains attributes - id, name, salary & department_name, thereby giving details on a particular instructor. Here the department_name is a foreign key on the instructors table, from the department table, 
+		  		which enables us to query for the 'inst_dept' relationship set.
+		  	</li>
+		  	<li>
+		  		<a href="/students"><h5>Students :</h5></a>
+		  		It contains attributes - id, name, total_credits, instructor_name & department_name, enlisting the particulars of every student in the college. The Instructor ID is a foreign key on the students table which enables us to query for the 'advisor' relationship set. Also, The department name is a foreign key on the students table which enables us to query for the 'student_department' relationship set
+		  	</li>
+		  	<li>
+		  		<a href="/sections"><h5>Sections :</h5></a>
+		  		It contains attributes - id, semester & year, thus uniquely defining a section. The "teaches" table is a relationship set between an instructor and section, and can be used to query which teacher teaches which section.
+		  	</li>
+		  </ul>
+		  <p><h5>Various Relationship sets are also used in this implementaion, namely, inst_dept, advisor, student_department & lastly teaches. Out of all these relationship sets we only create 'teaches' schema explicitly as every other relationship set has a many-to-one relationship and the entity set with 'many' mapping also has 'full participation' so the relationship set is merged with that schema.</h5>
+		  	<a href="/teaches"><h5>Teaches</h5></p>
+		  <br><br><br><br><br><br><br><br><br>
+		</div>
+		
+	</body>
+</html>

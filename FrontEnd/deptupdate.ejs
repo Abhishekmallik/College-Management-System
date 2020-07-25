@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Update Department</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+	<body>
+		
+		<nav class="navbar navbar-expand-sm bg-light navbar-light">
+		  <ul class="navbar-nav">
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/">Home</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/departments">Departments</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/instructors">Instructors</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/students">Students</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/sections">Sections</a>
+		    </li>
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/teaches">Teaches</a>
+		    </li>
+		  </ul>
+		</nav>
+		<div class="jumbotron">
+		<div class="container">
+		<div class="jumbotron">
+		  
+		  <form action="/departments/<%=department.deptName%>/updating" method ="GET">
+		  	<h1 style="text-align: center;">Update Department</h1>
+		  <div class="form-group">
+		  <label for="lname">New Dept name:</label><br>
+		  <input type="text" id="lname" name="newdept" value="<%=department.deptName%>">
+		</div>
+		<div class="form-group">
+		  <label for="lname">New Building name:</label><br>
+		  <input type="text" id="lname" name="newbuilding" value="<%=department.building%>">
+		</div>
+		<div class="form-group">
+		  <label for="lname">New Budget:</label><br>
+		  <input type="text" id="lname" name="newbudget" value="<%=department.budget%>">
+		</div>
+		  <input type="submit" value="Submit" class = "btn btn-primary">
+
+		  </form>
+		</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+	</body>
+</html>
