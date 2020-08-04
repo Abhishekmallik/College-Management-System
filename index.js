@@ -3,9 +3,7 @@ const app = Express();
 const db = require('./db/database').createDatabase();
 
 require('./startup/db').init(db);
-//require('./startup/logger')(app);
 require('./startup/routers')(app);
-// require('./startup/swagger')(app);
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 
