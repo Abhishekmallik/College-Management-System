@@ -9,9 +9,9 @@
   "author": "Abhishek Mallik",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "fs": "0.0.1-security",
     "joi": "^14.3.1",
     "morgan": "^1.9.1",
